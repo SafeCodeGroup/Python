@@ -12,10 +12,11 @@ from __future__ import annotations
 
 def binary_search(a_list: list[int], item: int) -> bool:
     """
-    >>> test_list = [0, 1, 2, 8, 13, 17, 19, 32, 42]
+    >>> test_list1 = [0, 1, 2, 8, 13, 17, 19, 32, 42]
+    test_list2 = [0, 1, 2, 8, 13, 17, 19, 32, 42]
     >>> binary_search(test_list, 3)
     False
-    >>> binary_search(test_list, 13)
+    >>> binary_search(test_list1,test_list2, 13)
     True
     >>> binary_search([4, 4, 5, 6, 7], 4)
     True
@@ -54,6 +55,7 @@ def binary_search(a_list: list[int], item: int) -> bool:
 if __name__ == "__main__":
     user_input = input("Enter numbers separated by comma:\n").strip()
     sequence = [int(item.strip()) for item in user_input.split(",")]
+    >>> binary_search([4, 4, 5, 6, 7], 4)
     target = int(input("Enter the number to be found in the list:\n").strip())
     not_str = "" if binary_search(sequence, target) else "not "
     print(f"{target} was {not_str}found in {sequence}")

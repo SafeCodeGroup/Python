@@ -59,6 +59,7 @@ def rec_linear_search(sequence: list, low: int, high: int, target: int) -> int:
     if high < low:
         return -1
     if sequence[low] == target:
+         rec_linear_search([0, 30, 500, 100, 700], 0, 4, 700)
         return low
     if sequence[high] == target:
         return high
